@@ -4,13 +4,12 @@
 
 ## 环境要求
 
-| 组件       | 推荐版本                          | 说明                          |
-| -------- | ----------------------------- | --------------------------- |
-| pico-sdk | 2.3.1                         | 安装到任意路径，并设置 `PICO_SDK_PATH` |
-| ARM 工具链  | GCC 15.2.1（Arm GNU 15.2.Rel1） | 用于交叉编译                      |
-| picotool | 2.3.1                         | 用于处理 UF2 文件                 |
-| cmake    | >= 3.13                       | 构建系统                        |
-| ninja    | 1.13.2                        | 可选，推荐使用                     |
+| 组件            | 版本                            | 位置                                             |
+| ------------- | ----------------------------- | ---------------------------------------------- |
+| pico-sdk      | 2.3.1                         | `~/.pico-sdk/sdk/2.3.1/`                       |
+| ARM 工具链       | GCC 15.2.1（Arm GNU 15.2.Rel1） | `~/.pico-sdk/toolchain/15_2_Rel1/`             |
+| picotool      | 2.3.1                         | `~/.pico-sdk/picotool/2.3.1/picotool/picotool` |
+| cmake / ninja | 4.3.4 / 1.13.2                | `~/.pico-sdk/cmake`、`~/.pico-sdk/ninja`        |
 
 安装 pico-sdk 的官方文档：  
 https://github.com/raspberrypi/pico-sdk
