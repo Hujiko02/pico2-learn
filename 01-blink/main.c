@@ -32,6 +32,7 @@ int main(void) {
         gpio_put(LED_PIN, 0);        /* 等价 GPIO_ResetBits */
         sleep_ms(500);
         printf("闪烁 %d 次\n", ++n);
+
     }
     return 0;
 }
