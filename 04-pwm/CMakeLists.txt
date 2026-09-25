@@ -42,7 +42,7 @@ pico_set_program_version(04-pwm "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(04-pwm 0)
-pico_enable_stdio_usb(04-pwm 1)
+pico_enable_stdio_usb(04-pwm 0)
 
 # Add the standard library to the build
 target_link_libraries(04-pwm

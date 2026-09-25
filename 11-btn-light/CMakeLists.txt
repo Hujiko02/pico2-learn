@@ -36,9 +36,9 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(11-btn-light 
-    main.c 
-    hardware/led.c
-    hardware/key.c
+        main.c 
+        hardware/led.c
+        hardware/key.c
 )
 
 pico_set_program_name(11-btn-light "11-btn-light")

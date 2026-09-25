@@ -35,7 +35,10 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(00-demo main.c )
+add_executable(00-demo 
+        main.c
+        hardware/OLED.c
+)
 
 pico_set_program_name(00-demo "00-demo")
 pico_set_program_version(00-demo "0.1")
@@ -51,6 +54,7 @@ target_link_libraries(00-demo
 # Add the standard include files to the build
 target_include_directories(00-demo PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/hardware
 )
 
 pico_add_extra_outputs(00-demo)

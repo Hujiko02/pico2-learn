@@ -40,5 +40,5 @@ void led1_toggle(void)
 
 void led2_toggle(void)
 {
-    gpio_put(LED2_PIN, !gpio_get_out_level(LED2_PIN)); 
+    gpio_xor_mask(1u << LED2_PIN); 
 }

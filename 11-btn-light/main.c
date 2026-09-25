@@ -1,15 +1,24 @@
 #include "pico/stdlib.h"
 #include "led.h"
+#include "key.h"
 
 int main()
 {
     led_init();
-    led1_on();
-    led2_off();
+    key_init();
+
+    uint8_t keynum = 0;
     while (true)
     {
-        led1_toggle();
-        led2_toggle();
-        sleep_ms(1000);
+        keynum = key_getnum();
+        if(keynum == 1)
+        {
+            led1_toggle();
+        }
+
+        if(keynum == 2)
+        {
+            led2_toggle();
+        }
     }
 }

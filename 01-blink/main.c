@@ -18,21 +18,19 @@
 
 #define LED_PIN 25                   /* Pico 2 板载 LED = GP25 */
 
-int main(void) {
+int main(void) 
+{
     stdio_init_all();                /* 初始化 USB/串口输出 */
     gpio_init(LED_PIN);              /* 开时钟 + 复位引脚 */
     gpio_set_dir(LED_PIN, GPIO_OUT); /* 配成推挽输出 */
 
-    printf("01-blink 起来了\n");
-
     int n = 0;
-    while (true) {
+    while (true) 
+    {
         gpio_put(LED_PIN, 1);        /* 等价 GPIO_SetBits */
         sleep_ms(500);
         gpio_put(LED_PIN, 0);        /* 等价 GPIO_ResetBits */
         sleep_ms(500);
-        printf("闪烁 %d 次\n", ++n);
-
     }
     return 0;
 }
